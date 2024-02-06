@@ -1,0 +1,36 @@
+<KO>
+  <MENU>
+    <FILE>
+      <STORE type="ACTIVE" runmode="FORGROUND">상태저장(&S)</STORE>
+      <PRINT>인쇄(&P)</PRINT>
+      <EXIT>종료(&X)</EXIT>
+    </FILE>
+    <EDIT>
+		<COPY>복사(&C)</COPY>
+		<SELECT>전체선택(&A)</SELECT>
+		<TRAYNO>번호입력(&T)</TRAYNO>
+    </EDIT>
+	<SETTING>
+		<SYSTEMSET>시스템설정(&S)</SYSTEMSET>
+		<USERSET>사용자설정(&O)</USERSET>
+		<ADMIN>관리자계정설정</ADMIN>
+		<ADMINRESET>관리자계정초기화</ADMINRESET>
+	</SETTING>
+	<CONTROL>
+		<START>작업시작(&R)</START>
+		<PAUSE>작업멈춤(&P)</PAUSE>
+		<RESUME>작업계속(&C)</RESUME>
+	</CONTROL>
+	<TOOLS>
+		<SCHEDULEEDITOR>ScheduleEditor(&S)</SCHEDULEEDITOR>
+		<ANALYZER>Analyzer(&A)</ANALYZER>
+	</TOOLS>
+  </MENU>
+  
+  <TopWindow>
+  </TopWindow>
+  
+  <MainWindow>
+  </MainWindow>
+
+</KO>
