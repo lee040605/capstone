@@ -9,25 +9,21 @@ void setup()
   for (int i = 0; i < numSensors; i++) 
   {
     pinMode(waterPins[i], INPUT);
-  }c:\easy2\scom.js
+  }
 }
 
 void loop() 
 {
-  char highestSensor = ' ';  // 감지된 가장 높은 수위의 센서 문자
+  char highestSensor = 'X';  // 기본값을 'X'로 설정
   for (int i = 0; i < numSensors; i++) 
   {
     int value = analogRead(waterPins[i]);
-    if (value > 500) 
+    if (value > 600) 
     {  // 센서가 감지되면
       highestSensor = msg[i];  // 가장 높은 수위의 센서를 업데이트
     }
   }
 
-  if (highestSensor != ' ') 
-  {  // 감지된 센서가 있으면
-    Serial.println(highestSensor);  // 메시지 전송
-  }
-  
+  Serial.println(highestSensor);  // 메시지 전송
   delay(1000);  // 1초 간격으로 체크
 }
