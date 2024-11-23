@@ -18,7 +18,7 @@ void loop()
   for (int i = 0; i < numSensors; i++) 
   {
     int value = analogRead(waterPins[i]);
-    if (value > 600) 
+    if (value > 700) 
     {  // 센서가 감지되면
       highestSensor = msg[i];  // 가장 높은 수위의 센서를 업데이트
     }
