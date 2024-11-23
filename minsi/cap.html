@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Level Indicator</title>
+    <title>실시간 수위 현황</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="cap.js"></script>
+    <script src="cap.js"></script>
     <link rel="stylesheet" href="cap.css" />
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .divider {
+            width: 90%;
+            height: 2px;
+            background-color: black;
+            margin: 10px auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="box" style="width: 100%; height: 50px; background-color: #DBDBDB;"></div>
+    <!-- 제목 -->
+    <div class="header">실시간 수위 현황</div>
+    <div class="divider"></div>
 
     <div class="box" style="width: 100%; height: 60%; background-color: #FFFFFF; display: flex;">
         <!-- 물탱크 -->
@@ -21,23 +45,22 @@
 
         <!-- 라인 차트 -->
         <div id="chartsContainer" style="width: 70%; display: flex; justify-content: center; align-items: center;">
-		<div class="chartBox" style="width: 40%; height: 90%;">
-			<canvas id="myLineChart"></canvas>
-		</div>
-		<div class="box" style="width: 10%; height: 80%;"></div>
-		
-		<!-- 차단기 -->
-		<div class="barrier-container" style="width: 40%; height: 90%; display: flex; justify-content: center; align-items: center;">
-			<div class="barrier-base">
-				<div class="barrier-arm" id="barrierArm"></div>
-			</div>
-		</div>		
-	</div>
-	
-	<div id="arduinoDataContainer" style="position: absolute; bottom: 200px; width: 100%; height: 5%; background-color: #f9f9f9; border: 1px solid #ddd; text-align: center; line-height: 50px; margin-top: 10px;">
-		데이터 수신 대기 중...
-	</div>
-	
-	
+            <div class="chartBox" style="width: 40%; height: 90%;">
+                <canvas id="myLineChart"></canvas>
+            </div>
+            <div class="box" style="width: 10%; height: 80%;"></div>
+            
+            <!-- 차단기 -->
+            <div class="barrier-container" style="width: 40%; height: 90%; display: flex; justify-content: center; align-items: center;">
+                <div class="barrier-base">
+                    <div class="barrier-arm" id="barrierArm"></div>
+                </div>
+            </div>      
+        </div>
+    </div>
+    
+    <div id="arduinoDataContainer" style="position: absolute; bottom: 200px; width: 100%; height: 5%; background-color: #f9f9f9; border: 1px solid #ddd; text-align: center; line-height: 50px; margin-top: 10px;">
+        현재 수위 레벨: 대기 중...
+    </div>
 </body>
 </html>
