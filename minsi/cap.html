@@ -35,23 +35,26 @@
     <div class="header">실시간 수위 현황</div>
     <div class="divider"></div>
 
-    <div class="box" style="width: 100%; height: 60%; background-color: #FFFFFF; display: flex;">
-        <!-- 물탱크 -->
-        <div class="container" style="width: 30%; display: flex; justify-content: center; align-items: center;">
-            <div class="water-tank" style="position: relative; width: 200px; height: 300px; background-color: #ccc; border: 2px solid #333; border-radius: 10px; overflow: hidden;">
-                <div class="water-level" id="waterLevel" style="position: absolute; bottom: 0; width: 100%; height: 0%; background-color: #1e90ff; transition: height 0.5s ease;"></div>
-            </div>
-        </div>
+    <div class="container" style="width: 90%; height: 60%; background-color: #FFFFFF; display: flex; margin-left: 90px;">
 
         <!-- 라인 차트 -->
-        <div id="chartsContainer" style="width: 70%; display: flex; justify-content: center; align-items: center;">
-            <div class="chartBox" style="width: 40%; height: 90%;">
+        <div id="chartsContainer" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+			<div class="chartBox" style="width: 20%; height:90%; display: flex; justify-content: center; align-items: center;">
+				<div class="water-tank" style="position: relative; width: 200px; height: 300px; background-color: #ccc; border: 2px solid #333; border-radius: 10px; overflow: hidden;">
+					<div class="water-level" id="waterLevel" style="position: absolute; bottom: 0; width: 100%; height: 0%; background-color: #1e90ff; transition: height 0.5s ease;"></div>
+				</div>
+			</div>
+			
+			<div class="box" style="width: 4%; height: 80%;"></div>
+		
+            <div class="chartBox" style="width: 50%; height: 90%;">
                 <canvas id="myLineChart"></canvas>
             </div>
-            <div class="box" style="width: 10%; height: 80%;"></div>
+			
+            <div class="box" style="width: 4%; height: 80%;"></div>
             
             <!-- 차단기 -->
-            <div class="barrier-container" style="width: 40%; height: 90%; display: flex; justify-content: center; align-items: center;">
+            <div class="barrier-container" style="width: 20%; height: 90%; display: flex; justify-content: center; align-items: center;">
                 <div class="barrier-base">
                     <div class="barrier-arm" id="barrierArm"></div>
                 </div>
@@ -59,7 +62,7 @@
         </div>
     </div>
     
-    <div id="arduinoDataContainer" style="position: absolute; bottom: 200px; width: 100%; height: 5%; background-color: #f9f9f9; border: 1px solid #ddd; text-align: center; line-height: 50px; margin-top: 10px;">
+    <div id="arduinoDataContainer" style="position: absolute; bottom: 200px; width: 90%; height: 5%; background-color: #f9f9f9; border: 1px solid #ddd; text-align: center; line-height: 50px; margin-top: 10px; margin-left: 100px;">
         현재 수위 레벨: 대기 중...
     </div>
 </body>
